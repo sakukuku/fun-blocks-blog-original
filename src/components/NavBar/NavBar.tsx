@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from "next/image";
+import SearchInput from "@/components/SearchInput/SearchInput";
 
 export const BottomSVG = () => {
   return (
@@ -814,30 +816,24 @@ export const BottomSVG = () => {
 
 export const NavBar = () => {
   return (
-      <nav style={{backgroundColor: '#FFFCF9'}}>
+      <nav className={"bg-floralWhite"}>
         <div className="max-w-full mx-auto px-10 py-7.5 h-24" style={{height: '98px'}}>
           <div className="flex justify-between items-center h-full mx-auto" style={{width: '1200px'}}>
 
             {/* Logo Section */}
             <div className="flex space-x-4">
               <a href="#" className="flex items-center">
-                <img src="/funblocks.svg" alt="Logo" style={{width: '204px', height: '25px'}}/>
+                <Image src="/funblocks.svg" alt="Logo" width={204} height={25}/>
               </a>
             </div>
 
-            {/* Search Input Section */}
-            <div className="flex items-center">
-              <input
-                  className="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
-                  type="search" name="search" placeholder="Search"
-              />
-            </div>
+            <SearchInput/>
 
             {/* Page Navigation Links Section */}
             <div className="flex items-center space-x-1">
-              <a href="#" className="py-5 px-3">Home</a>
-              <a href="#" className="py-5 px-3">About</a>
-              <a href="#" className="py-5 px-3">Contact</a>
+              <a href="#" className="py-5 px-3 text-black">Home</a>
+              <a href="#" className="py-5 px-3 text-black">About</a>
+              <a href="#" className="py-5 px-3 text-black">Contact</a>
             </div>
 
           </div>
