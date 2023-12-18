@@ -1,17 +1,20 @@
 import React from 'react';
 import Button from "@mui/joy/Button";
-import {Avatar, Chip} from "@mui/joy";
+import {Tag} from "@/components/Tag/Tag";
+import Image from "next/image";
 
 export const GamesColumn = () => {
   return (
-      <div className="border border-black bg-[#FFFCF9] p-5 w-[285px] max-h-[776px]">
+      <div className="border border-black bg-floralWhite p-5 w-[285px] max-h-[776px]">
         {/* Row 1 */}
         <div className="flex justify-between items-center mb-10 h-[33px]">
-          <Chip>Games</Chip>
-          <div>
-            {/* Replace IconComponent with your actual icon button component */}
-            <Avatar>F</Avatar>
-          </div>
+          <Tag text={'games'} type={'section'}/>
+          <Image
+              src={'/filter.svg'}
+              alt="Filter Icon"
+              width={24}
+              height={24}
+          />
         </div>
 
         {/* Row 2 */}
