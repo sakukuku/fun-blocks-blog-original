@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import SearchInput from "@/components/SearchInput/SearchInput";
+import Button from "@mui/joy/Button";
 
 export const BottomSVG = () => {
   return (
@@ -831,9 +832,13 @@ export const NavBar = () => {
 
             {/* Page Navigation Links Section */}
             <div className="flex items-center space-x-1">
-              <a href="#" className="py-5 px-3 text-black">Home</a>
-              <a href="#" className="py-5 px-3 text-black">About</a>
-              <a href="#" className="py-5 px-3 text-black">Contact</a>
+              <a href="#" className="py-5 px-3 text-black">Games</a>
+              <a href="#" className="py-5 px-3 text-black">News</a>
+              <a href="#" className="py-5 px-3 text-black">Reviews</a>
+              <a href="#" className="py-5 px-3 text-black">Videos</a>
+              <a href="#" className="py-5 px-3 text-black">Events</a>
+              <Button color={"primary"} variant="solid" onClick={() => {
+              }}>Play Now</Button>
             </div>
 
           </div>
